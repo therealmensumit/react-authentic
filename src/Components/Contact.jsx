@@ -21,39 +21,39 @@ const Contact = () => {
 
       <section className="py-8 -translate-y-14">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-3 gap-4 items-center">
-            <div className="col-span-2">
-              <div className="p-8 shadow-xl bg-white rounded-xl">
-                <form className="grid grid-cols-2 gap-4">
-                  <div className="mb-4">
+          <div className="grid grid-cols-3 gap-8 items-center">
+            <div className="md:col-span-2 col-span-3">
+              <div className="md:p-8 p-4 shadow-xl bg-white rounded-xl">
+                <form className="grid grid-cols-2 gap-8">
+                  <div className="md:col-span-1 col-span-2">
                     <input
                       className="w-full bg-white border-b-[1px] border-black focus:bg-[#eee] text-base outline-none p-3 transition-colors duration-200 ease-in-out"
                       type="text"
                       placeholder="Name*"
                     />
                   </div>
-                  <div className="mb-4">
+                  <div className="md:col-span-1 col-span-2">
                     <input
                       className="w-full bg-white border-b-[1px] border-black focus:bg-[#eee] text-base outline-none p-3 transition-colors duration-200 ease-in-out"
                       type="email"
                       placeholder="Email*"
                     />
                   </div>
-                  <div className="mb-4">
+                  <div className="md:col-span-1 col-span-2">
                     <input
                       className="w-full bg-white border-b-[1px] border-black focus:bg-[#eee] text-base outline-none p-3 transition-colors duration-200 ease-in-out"
                       type="tel"
                       placeholder="Phone*"
                     />
                   </div>
-                  <div className="mb-4">
+                  <div className="md:col-span-1 col-span-2">
                     <input
                       className="w-full bg-white border-b-[1px] border-black focus:bg-[#eee] text-base outline-none p-3 transition-colors duration-200 ease-in-out"
                       type="text"
                       placeholder="Company"
                     />
                   </div>
-                  <div className="mb-4 col-span-full">
+                  <div className=" col-span-full">
                     <textarea
                       className="w-full bg-white border-b-[1px] border-black focus:bg-[#eee] text-base outline-none p-3 transition-colors duration-200 ease-in-out"
                       rows="8"
@@ -68,7 +68,7 @@ const Contact = () => {
                 </form>
               </div>
             </div>
-            <div>
+            <div className="md:col-span-1 col-span-3">
               <img src={contactImg} alt="Contact" />
             </div>
           </div>

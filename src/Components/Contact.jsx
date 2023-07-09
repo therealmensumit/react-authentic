@@ -4,7 +4,7 @@ import contactImg from "../assets/img/contact-us.svg";
 const Contact = () => {
   return (
     <>
-      <section className="py-8 bg-[#eee]">
+      <section className="py-8 bg-[#eee] font-body">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-darkBlue font-bold lg:text-5xl text-3xl mb-4 pb-4">
             Ready for an <span className="text-orange">Authentic</span> Future??
@@ -19,7 +19,7 @@ const Contact = () => {
         </div>
       </section>
 
-      <section className="py-8 -translate-y-14">
+      <section className="py-8 -translate-y-14 font-body">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-3 gap-8 items-center">
             <div className="md:col-span-2 col-span-3">

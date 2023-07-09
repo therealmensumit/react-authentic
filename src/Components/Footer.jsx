@@ -17,13 +17,13 @@ const Footer = () => {
                     <div className="lg:w-4/12 w-full px-4">
                         <div className="flex flex-wrap gap-y-4">
                             <div className="md:w-6/12 w-full">
-                                <h4 className="text-2xl text-white mb-4 font-semibold">Quick Links</h4>
+                                <h4 className="md:text-2xl text-xl text-white mb-4 font-semibold">Quick Links</h4>
                                 <Link className="text-white hover:text-orange block" to={'/about-us'}>About Us</Link>
                                 <Link className="text-white hover:text-orange block" to={'/'}>Services</Link>
                                 <Link className="text-white hover:text-orange block" to={'/contact-us'}>Contact Us</Link>
                             </div>
                             <div className="md:w-6/12 w-full">
-                                <h4 className="text-2xl text-white mb-4 font-semibold">Services</h4>
+                                <h4 className="md:text-2xl text-xl text-white mb-4 font-semibold">Services</h4>
                                 <Link className="text-white hover:text-orange block" to={'/'}>Website</Link>
                                 <Link className="text-white hover:text-orange block" to={'/'}>Digital Marketing</Link>
                                 <Link className="text-white hover:text-orange block" to={'/'}>Designing</Link>
@@ -32,7 +32,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="lg:w-4/12 w-full px-4">
-                        <h4 className="text-2xl text-white mb-4 font-semibold">Follow us on:</h4>
+                        <h4 className="md:text-2xl text-xl text-white mb-4 font-semibold">Follow us on:</h4>
                     </div>
                 </div>
             </div>

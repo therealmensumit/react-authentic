@@ -1,7 +1,9 @@
 import React, { useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import BannerImg from "../assets/img/banner-img.png";
+
 
 const Home = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -31,7 +33,7 @@ const Home = () => {
 
   return (
     <>
-      <section className="bg-darkBlue py-8 font-body">
+      <section className="before:bg-darkBlue before:absolute before:top-0 before:right-0 before:w-full before:h-full before:rounded-bl-[300px] before:-z-10 z-0 relative py-8 font-body">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap -mx-4 items-center gap-y-4">
             <div className="lg:w-6/12 w-full px-4 lg:text-start text-center">
@@ -49,12 +51,12 @@ const Home = () => {
                 presence. With our 360° Digital Marketing Services, experience
                 your business growth like never before!
               </p>
-              <a
-                href="#"
+              <Link
+                to={'/about-us'}
                 className="p-2 border-2 border-white text-white inline-block hover:border-orange hover:bg-orange"
               >
                 About Company
-              </a>
+              </Link>
             </div>
             <div className="lg:w-6/12 w-full px-4">
               <img src={BannerImg} alt="Banner" className="w-9/12 mx-auto" />

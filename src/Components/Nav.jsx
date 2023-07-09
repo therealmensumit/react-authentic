@@ -10,7 +10,7 @@ const Nav = () => {
   };
 
   return (
-    <header className="bg-darkBlue font-body relative z-10">
+    <header className="bg-darkBlue font-body sticky top-0 z-10">
       <div className="container mx-auto flex flex-wrap px-4 py-2 items-center">
         <Link to={'/'} className="flex title-font font-medium items-center text-orange">
           <img src={Logo} alt="Logo" className="md:w-24 w-20" />

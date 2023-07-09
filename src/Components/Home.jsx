@@ -36,7 +36,7 @@ const Home = () => {
           <div className="flex flex-wrap -mx-4 items-center gap-y-4">
             <div className="lg:w-6/12 w-full px-4 lg:text-start text-center">
               <h1
-                ref={boxRef}
+                // ref={boxRef}
                 className="mb-4 font-head text-white md:text-6xl text-4xl md:leading-[72px] font-bold"
               >
                 Take your First{" "}

@@ -2,6 +2,8 @@ import React from "react";
 import contactImg from "../assets/img/contact-us.svg";
 
 const Contact = () => {
+  const services = ['website', 'digital marketing', 'designing', 'branding'];
+  const categories = ['Wordpress website design services', 'Website maintainance services', 'PHP web design and development', 'UI & UX design services', 'E-commerce website and design services'];
   return (
     <>
       <section className="py-8 bg-[#eee] font-body">
@@ -38,6 +40,28 @@ const Contact = () => {
                       type="email"
                       placeholder="Email*"
                     />
+                  </div>
+                  <div className="md:col-span-1 col-span-2">
+                    <select
+                      className="w-full capitalize bg-white border-b-[1px] border-black text-gray focus:bg-[#eee] text-base outline-none p-3 transition-colors duration-200 ease-in-out"
+                      id=""
+                    >
+                      <option defaultValue>Services*</option>
+                      {services.map((service, index) => (
+                        <option className="capitalize" key={index} value={service}>{service}</option>
+                      ))}
+                    </select>
+                  </div>
+                  <div className="md:col-span-1 col-span-2">
+                    <select
+                      className="w-full capitalize bg-white border-b-[1px] border-black text-gray focus:bg-[#eee] text-base outline-none p-3 transition-colors duration-200 ease-in-out"
+                      id=""
+                      >
+                      <option defaultValue>Select Category*</option>
+                      {categories.map((category, index) => (
+                        <option className="capitalize" key={index} value={category}>{category}</option>
+                      ))}
+                    </select>
                   </div>
                   <div className="md:col-span-1 col-span-2">
                     <input

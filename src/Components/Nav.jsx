@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from "react"
-import { useLocation } from 'react-router-dom';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Logo from '../assets/img/logo.svg'
 import {FaBars} from "react-icons/fa6";
 
@@ -35,7 +34,7 @@ const Nav = () => {
             </svg>
           </Link>
           <Link to={'/contact-us'} className="capitalize inline-block py-4 text-white hover:text-orange">contact us</Link>
-          <Link className="p-2 border-2 inline-block border-white text-white hover:border-orange hover:bg-orange">Free Consultation</Link>
+          <Link to={'/free-consultation'} className="p-2 border-2 inline-block border-white text-white hover:border-orange hover:bg-orange">Free Consultation</Link>
         </nav>
       </div>
     </header>

@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react"
+import { useLocation } from 'react-router-dom';
 import { Link } from "react-router-dom";
 import Logo from '../assets/img/logo.svg'
-import { useLocation } from 'react-router-dom';
 import {FaBars} from "react-icons/fa6";
 
 const Nav = () => {

@@ -7,8 +7,13 @@ import contactImg from "../../assets/img/contact-us.svg";
 import Icon1 from '../../assets/img/DetailConsultation.svg'
 import Icon2 from '../../assets/img/TimeOrientedResults.svg'
 import Icon3 from '../../assets/img/RegularFollowups.svg'
+import Website from '../../assets/img/Website.svg'
+import DigitalMarketing from '../../assets/img/DigitalMarketing.svg'
+import Designing from '../../assets/img/Designing.svg'
+import Branding from '../../assets/img/Branding.svg'
 
 import Card from "./Card";
+import Card2 from "./Card2";
 
 
 
@@ -88,6 +93,21 @@ const Home = () => {
         </div>
       </section>
 
+      {/* card2 section */}
+      <section className="bg-blue py-14">
+        <div className="container mx-auto px-4">
+        <div className="lg:w-10/12 w-full mx-auto text-center mb-8 text-white">
+            <h2 className="font-head lg:text-5xl text-3xl font-bold mb-4">Discover everything <span className="text-orange">we can offer</span> you</h2>
+            <p>We are One Stop Shop for all your digital needs! From website to digital marketing, we introduce relevant and significant changes that allow you to express your brand authentically!</p>
+          </div>
+          <div className="grid grid-cols-4 gap-4">
+            <Card2 img={Website} alt={'Website'} title={'WEBSITE'} para={'We create a website that reflects you and your business! From domain to hosting, let us handle everything for'} />
+            <Card2 img={DigitalMarketing} alt={'Digital Marketing'} title={'DIGITAL MARKETING'} para={'We provide digital marketing services that yield results around the clock! Our Digital Marketing services cover'} />
+            <Card2 img={Designing} alt={'Designing'} title={'DESIGNING'} para={'Wish to have designs that leave everyone spellbound? Say no more! Our talented team of designers are here to curate'} />
+            <Card2 img={Branding} alt={'Branding'} title={'BRANDING'} para={'Sell off your brand like never before! Become a label and let your brand speak for you while you work on the core areas.'} />
+          </div>
+        </div>
+      </section>
 
       {/* contact section */}
       <div className="container mx-auto px-4 py-14">

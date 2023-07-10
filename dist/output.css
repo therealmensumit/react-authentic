@@ -725,7 +725,7 @@ video {
   border-color: 1;
 }
 
-.bg-darkBlue {
+.bg-blue {
   --tw-bg-opacity: 1;
   background-color: rgb(1 17 66 / var(--tw-bg-opacity));
 }
@@ -848,7 +848,7 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-darkBlue {
+.text-blue {
   --tw-text-opacity: 1;
   color: rgb(1 17 66 / var(--tw-text-opacity));
 }

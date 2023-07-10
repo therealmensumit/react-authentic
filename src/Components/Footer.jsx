@@ -4,7 +4,7 @@ import Logo from '../assets/img/logo.svg'
 const Footer = () => {
   return (
     <>
-        <footer className="py-8 font-body bg-darkBlue">
+        <footer className="py-8 font-body bg-blue">
             <div className="container mx-auto px-4">
                 <div className="flex flex-wrap gap-y-4 -mx-4">
                     <div className="lg:w-4/12 w-full px-4">
@@ -38,7 +38,7 @@ const Footer = () => {
             </div>
         </footer>
         <div className="py-3">
-            <p className="text-center font-body text-darkBlue">&copy; {new Date().getFullYear()} — Authentic Cave. All Rights Reserved.</p>
+            <p className="text-center font-body text-blue">&copy; {new Date().getFullYear()} — Authentic Cave. All Rights Reserved.</p>
         </div>    
     </>
   )

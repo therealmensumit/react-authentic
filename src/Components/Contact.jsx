@@ -6,10 +6,10 @@ const Contact = () => {
     <>
       <section className="py-8 bg-[#eee] font-body">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-darkBlue font-bold lg:text-5xl text-3xl mb-4 pb-4">
+          <h2 className="text-blue font-bold lg:text-5xl text-3xl mb-4 pb-4">
             Ready for an <span className="text-orange">Authentic</span> Future??
           </h2>
-          <p className="mb-10 lg:w-10/12 mx-auto text-xl text-darkBlue">
+          <p className="mb-10 lg:w-10/12 mx-auto text-xl text-blue">
             We understand that you may have questions regarding{" "}
             <strong>us and our services.</strong> Worry no more! For a{" "}
             <strong>free consultation</strong> or a specific doubt, fill in the
@@ -61,7 +61,7 @@ const Contact = () => {
                     ></textarea>
                   </div>
                   <div>
-                    <button className="px-16 py-3 font-bold rounded bg-darkBlue text-white hover:bg-orange">
+                    <button className="px-16 py-3 font-bold bg-blue text-white hover:bg-orange">
                       SEND
                     </button>
                   </div>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import BannerImg from "../../assets/img/banner-img.png";
-import contactImg from "../../assets/img/contact-us.svg";
+import contactImg from "../../assets/img/contact-img.svg";
 import Icon1 from '../../assets/img/DetailConsultation.svg'
 import Icon2 from '../../assets/img/TimeOrientedResults.svg'
 import Icon3 from '../../assets/img/RegularFollowups.svg'
@@ -113,7 +113,7 @@ const Home = () => {
       <div className="container mx-auto px-4 py-14">
         <div className="grid grid-cols-3 gap-8 items-center">
           <div className="md:col-span-1 col-span-3">
-            <img src={contactImg} alt="Contact" className="-scale-x-100" />
+            <img src={contactImg} alt="Contact" />
           </div>
           <div className="md:col-span-2 col-span-3">
             <div className="md:p-8 p-4 bg-white rounded-xl">

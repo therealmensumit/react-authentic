@@ -1,9 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 import contactImg from "../assets/img/contact-us.svg";
 
 const Contact = () => {
-  const services = ['website', 'digital marketing', 'designing', 'branding'];
-  const categories = ['Wordpress website design services', 'Website maintainance services', 'PHP web design and development', 'UI & UX design services', 'E-commerce website and design services'];
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  // const [message, setMessage] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Send the form data via Email.js
+    emailjs
+      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", e.target, "YOUR_USER_ID")
+      .then((result) => {
+        // Handle success
+        console.log("Email sent successfully:", result.text);
+      })
+      .catch((error) => {
+        // Handle error
+        console.error("Error sending email:", error.text);
+      });
+
+    // Reset form fields
+    setName("");
+    setEmail("");
+    // setMessage("");
+  };
+  const services = ["website", "digital marketing", "designing", "branding"];
+  const categories = [
+    "Wordpress website design services",
+    "Website maintainance services",
+    "PHP web design and development",
+    "UI & UX design services",
+    "E-commerce website and design services",
+  ];
   return (
     <>
       <section className="py-8 bg-[#eee] font-body">
@@ -26,11 +57,17 @@ const Contact = () => {
           <div className="grid grid-cols-3 gap-8 items-center">
             <div className="md:col-span-2 col-span-3">
               <div className="md:p-8 p-4 shadow-xl bg-white rounded-xl">
-                <form className="grid grid-cols-2 gap-8">
+                <form
+                  className="grid grid-cols-2 gap-8"
+                  onSubmit={handleSubmit}
+                >
                   <div className="md:col-span-1 col-span-2">
                     <input
                       className="w-full bg-white border-b-[1px] border-black focus:bg-[#eee] text-base outline-none p-3 transition-colors duration-200 ease-in-out"
                       type="text"
+                      name="name"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
                       placeholder="Name*"
                     />
                   </div>
@@ -38,6 +75,9 @@ const Contact = () => {
                     <input
                       className="w-full bg-white border-b-[1px] border-black focus:bg-[#eee] text-base outline-none p-3 transition-colors duration-200 ease-in-out"
                       type="email"
+                      name="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                       placeholder="Email*"
                     />
                   </div>
@@ -48,7 +88,13 @@ const Contact = () => {
                     >
                       <option defaultValue>Services*</option>
                       {services.map((service, index) => (
-                        <option className="capitalize" key={index} value={service}>{service}</option>
+                        <option
+                          className="capitalize"
+                          key={index}
+                          value={service}
+                        >
+                          {service}
+                        </option>
                       ))}
                     </select>
                   </div>
@@ -56,10 +102,16 @@ const Contact = () => {
                     <select
                       className="w-full capitalize bg-white border-b-[1px] border-black text-gray focus:bg-[#eee] text-base outline-none p-3 transition-colors duration-200 ease-in-out"
                       id=""
-                      >
+                    >
                       <option defaultValue>Select Category*</option>
                       {categories.map((category, index) => (
-                        <option className="capitalize" key={index} value={category}>{category}</option>
+                        <option
+                          className="capitalize"
+                          key={index}
+                          value={category}
+                        >
+                          {category}
+                        </option>
                       ))}
                     </select>
                   </div>
@@ -85,7 +137,10 @@ const Contact = () => {
                     ></textarea>
                   </div>
                   <div>
-                    <button className="px-16 py-3 font-bold bg-blue text-white hover:bg-orange">
+                    <button
+                      className="px-16 py-3 font-bold bg-blue text-white hover:bg-orange"
+                      type="submit"
+                    >
                       SEND
                     </button>
                   </div>

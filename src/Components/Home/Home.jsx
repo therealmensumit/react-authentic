@@ -166,7 +166,7 @@ const Home = () => {
         <div className="text-center lg:w-9/12 w-full mx-auto pt-8">
           <h2 className="text-blue md:text-6xl text-3xl font-extrabold font-head relative after:absolute after:w-32 after:h-[2px] after:bg-orange after:bottom-0 after:right-2/4 after:translate-x-2/4 pb-2 mb-4">Connect with our Experts?</h2>
           <p className="font-head text-blue text-xl font-bold mb-6">We are just a Call away</p>
-          <Link className="uppercase py-2 px-6 border-2 border-blue text-white bg-blue inline-block hover:border-orange hover:bg-orange">call now</Link>
+          <Link className="uppercase py-2 px-6 border-2 font-semibold border-blue text-white bg-blue inline-block hover:border-orange hover:bg-orange">call now</Link>
         </div>
       </div>
     </div>

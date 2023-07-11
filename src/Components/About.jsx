@@ -34,7 +34,7 @@ const About = () => {
             <Link className="py-2 px-6 border-2 border-blue text-white bg-blue inline-block hover:border-orange hover:bg-orange">BOOK A FREE CONSULTATION</Link>
           </div>
         </div>
-      </section>    
+      </section>
     </div>
   );
 };

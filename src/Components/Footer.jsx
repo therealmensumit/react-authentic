@@ -30,10 +30,10 @@ const Footer = () => {
                             </div>
                             <div className="md:w-6/12 w-full">
                                 <h4 className="md:text-2xl text-xl text-white mb-4 font-semibold">Services</h4>
-                                <Link className="text-white hover:text-orange block" to={'/'}>Website</Link>
-                                <Link className="text-white hover:text-orange block" to={'/'}>Digital Marketing</Link>
-                                <Link className="text-white hover:text-orange block" to={'/'}>Designing</Link>
-                                <Link className="text-white hover:text-orange block" to={'/'}>Branding</Link>
+                                <Link className="text-white hover:text-orange block" to={'/services'}>Website</Link>
+                                <Link className="text-white hover:text-orange block" to={'/services'}>Digital Marketing</Link>
+                                <Link className="text-white hover:text-orange block" to={'/services'}>Designing</Link>
+                                <Link className="text-white hover:text-orange block" to={'/services'}>Branding</Link>
                             </div>
                         </div>
                         <Link to={'mailto:xyz@mail.com'} className="flex gap-2 items-center text-white hover:text-orange">
@@ -46,16 +46,16 @@ const Footer = () => {
                     <div className="lg:w-4/12 w-full px-4">
                         <h4 className="md:text-2xl text-xl text-white mb-4 font-semibold">Follow us on:</h4>
                         <div className="flex gap-4 text-white">
-                            <Link className="w-12 h-12 border border-white grid place-content-center rounded-full hover:bg-orange">
+                            <Link target="_blank" className="w-12 h-12 border border-white grid place-content-center rounded-full hover:bg-orange">
                                 <FaFacebookF/>
                             </Link>
-                            <Link className="w-12 h-12 border border-white grid place-content-center rounded-full hover:bg-orange">
+                            <Link target="_blank" className="w-12 h-12 border border-white grid place-content-center rounded-full hover:bg-orange">
                                 <FaInstagram/>
                             </Link>
-                            <Link className="w-12 h-12 border border-white grid place-content-center rounded-full hover:bg-orange">
+                            <Link target="_blank" className="w-12 h-12 border border-white grid place-content-center rounded-full hover:bg-orange">
                                 <FaLinkedinIn/>
                             </Link>
-                            <Link className="w-12 h-12 border border-white grid place-content-center rounded-full hover:bg-orange">
+                            <Link target="_blank" className="w-12 h-12 border border-white grid place-content-center rounded-full hover:bg-orange">
                                 <FaWhatsapp/>
                             </Link>
                         </div>

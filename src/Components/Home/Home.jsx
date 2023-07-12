@@ -2,11 +2,15 @@ import React, { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Css from '../../App.module.css'
 import BannerImg from "../../assets/img/banner-img.png";
 import contactImg from "../../assets/img/contact-img.svg";
 import Icon1 from '../../assets/img/DetailConsultation.svg'
 import Icon2 from '../../assets/img/TimeOrientedResults.svg'
 import Icon3 from '../../assets/img/RegularFollowups.svg'
+import YourConcern from '../../assets/img/your-concern.svg'
+import OurExpertise from '../../assets/img/our-expertise.svg'
+import DesiredResults from '../../assets/img/desired-results.svg'
 import Website from '../../assets/img/Website.svg'
 import DigitalMarketing from '../../assets/img/DigitalMarketing.svg'
 import Designing from '../../assets/img/Designing.svg'
@@ -14,6 +18,7 @@ import Branding from '../../assets/img/Branding.svg'
 
 import Card from "./Card";
 import Card2 from "./Card2";
+import Card3 from "./Card3";
 
 
 
@@ -78,17 +83,13 @@ const Home = () => {
         </div>
       </section>
 
-      {/* card section */}
-      <section className="py-14">
+      {/* card3 section */}
+      <section className="py-28 bg-contain bg-no-repeat bg-center bg-map">
         <div className="container mx-auto px-4">
-          <div className="lg:w-10/12 w-full mx-auto text-center mb-8">
-            <h2 className="text-blue font-head lg:text-5xl text-3xl font-bold mb-4">Why Should You Choose <span className="text-orange">Authentic Cave</span>?</h2>
-            <p>With a customer-first approach, our team is pledged to offer and execute projects like no other! Here are the key promises that we swear by that have helped us retain our precious clients:</p>
-          </div>
-          <div className="grid grid-cols-3 gap-8">
-            <Card img={Icon1} alt={'icon 1'} title={'DETAILED CONSULTATION'} para={'We understand that every individual and business needs are different and hence, we offer customized solutions after keen observation and in-depth discussion with our clients.'} />
-            <Card img={Icon2} alt={'icon 2'} title={'TIME ORIENTED RESULTS'} para={'We acknowledge the fact that every second counts! Our unit makes sure that you get timely results for every buck you spend..'} />
-            <Card img={Icon3} alt={'icon 3'} title={'REGULAR FOLLOWUPS'} para={'We believe in keeping our clients updated even after sales! With data-driven insights and regular follow-ups, we make it certain to keep them satisfied.'} />
+          <div className="grid grid-cols-3 lg:gap-20 gap-12 relative before:absolute after:absolute before:bg-arrow after:bg-arrow before:w-40 before:h-40 after:w-40 after:h-40 before:-top-28 after:-bottom-28 after:rotate-180 before:right-72 after:left-72 before:lg:block after:lg:block before:hidden after:hidden">
+            <Card3 img={YourConcern} alt={'Your Concern'} title={'Your Concern'} para={'Are you worried that your website never shows up in the local listing? Or are you just embarking on your digital journey or wishing to revamp your existing state of affairs? Leave your worry at the door while you visit us!'} />
+            <Card3 img={OurExpertise} alt={'Our Expertise'} title={'Our Expertise'} para={'Our team of talented developers and designers possess expertise across collective services including website, branding, digital marketing and designing. In short, everything that your business and brand may need!'} />
+            <Card3 img={DesiredResults} alt={'Desired Results'} title={'Desired Results'} para={'We intend to shape your ideas and convert them into reality. Put in place and build a constructive brand image which is a reflection of your objectives and intentions. Let us work for you, it\'s not too late yet!'} />
           </div>
         </div>
       </section>
@@ -105,6 +106,21 @@ const Home = () => {
             <Card2 img={DigitalMarketing} alt={'Digital Marketing'} title={'DIGITAL MARKETING'} para={'We provide digital marketing services that yield results around the clock! Our Digital Marketing services cover'} />
             <Card2 img={Designing} alt={'Designing'} title={'DESIGNING'} para={'Wish to have designs that leave everyone spellbound? Say no more! Our talented team of designers are here to curate'} />
             <Card2 img={Branding} alt={'Branding'} title={'BRANDING'} para={'Sell off your brand like never before! Become a label and let your brand speak for you while you work on the core areas.'} />
+          </div>
+        </div>
+      </section>
+
+      {/* card section */}
+      <section className="py-14">
+        <div className="container mx-auto px-4">
+          <div className="lg:w-10/12 w-full mx-auto text-center mb-8">
+            <h2 className="text-blue font-head lg:text-5xl text-3xl font-bold mb-4">Why Should You Choose <span className="text-orange">Authentic Cave</span>?</h2>
+            <p>With a customer-first approach, our team is pledged to offer and execute projects like no other! Here are the key promises that we swear by that have helped us retain our precious clients:</p>
+          </div>
+          <div className="grid grid-cols-3 gap-8">
+            <Card img={Icon1} alt={'icon 1'} title={'DETAILED CONSULTATION'} para={'We understand that every individual and business needs are different and hence, we offer customized solutions after keen observation and in-depth discussion with our clients.'} />
+            <Card img={Icon2} alt={'icon 2'} title={'TIME ORIENTED RESULTS'} para={'We acknowledge the fact that every second counts! Our unit makes sure that you get timely results for every buck you spend..'} />
+            <Card img={Icon3} alt={'icon 3'} title={'REGULAR FOLLOWUPS'} para={'We believe in keeping our clients updated even after sales! With data-driven insights and regular follow-ups, we make it certain to keep them satisfied.'} />
           </div>
         </div>
       </section>

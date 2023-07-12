@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import {FaPhone, FaEnvelope, FaLocationDot, FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp} from "react-icons/fa6";
 import InterviewBro from '../assets/img/InterviewBro.svg'
+import Css from '../App.module.css'
 
 const FreeConsultation = () => {
   const services = ["website", "digital marketing", "designing", "branding"];
@@ -21,7 +22,7 @@ const FreeConsultation = () => {
         </div>
       </div>
 
-      <section className="pb-14 relative z-0 after:absolute after:-z-10 after:w-full after:h-full after:right-0 after:bottom-0 after:bg-blue clip-path">
+      <section className={`pb-14 relative z-0 after:absolute after:-z-10 after:w-full after:h-full after:right-0 after:bottom-0 after:bg-blue ${Css.clipath}`}>
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-3 gap-4">
             <div className="md:col-span-2 col-span-3">

@@ -6,7 +6,7 @@ const Card2 = (props) => {
         <img className="w-full rounded-xl group-hover:scale-110 transition-all" src={props.img} alt={props.alt} />
         <div className="p-4">
             <h3 className="font-head text-white text-2xl font-semibold mb-1">{props.title}</h3>
-            <p className="text-white">{props.para} <Link to={props.read} className="text-orange inline hover:opacity-75">Read More...</Link></p>
+            <p className="text-white">{props.para} <Link to={'/services'} className="text-orange inline hover:opacity-75">Read More...</Link></p>
         </div>
     </div>
   )

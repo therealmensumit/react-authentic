@@ -1,32 +1,7 @@
 import React, { useState } from "react";
-import emailjs from "@emailjs/browser";
 import contactImg from "../assets/img/contact-us.svg";
 
 const Contact = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  // const [message, setMessage] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    // Send the form data via Email.js
-    emailjs
-      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", e.target, "YOUR_USER_ID")
-      .then((result) => {
-        // Handle success
-        console.log("Email sent successfully:", result.text);
-      })
-      .catch((error) => {
-        // Handle error
-        console.error("Error sending email:", error.text);
-      });
-
-    // Reset form fields
-    setName("");
-    setEmail("");
-    // setMessage("");
-  };
   const services = ["website", "digital marketing", "designing", "branding"];
   const categories = [
     "Wordpress website design services",
@@ -35,6 +10,11 @@ const Contact = () => {
     "UI & UX design services",
     "E-commerce website and design services",
   ];
+  const [name, setName] = useState();
+  const nameHandle = (e) => {
+    setName(e.target.value);
+    console.log(e.target.value);
+  }
   return (
     <>
       <section className="py-8 bg-[#eee] font-body">
@@ -57,33 +37,28 @@ const Contact = () => {
           <div className="grid grid-cols-3 gap-8 items-center">
             <div className="md:col-span-2 col-span-3">
               <div className="md:p-8 p-4 shadow-xl bg-white rounded-xl">
-                <form
-                  className="grid grid-cols-2 gap-8"
-                  onSubmit={handleSubmit}
-                >
+                <form className="grid grid-cols-2 gap-8">
                   <div className="md:col-span-1 col-span-2">
                     <input
-                      className="w-full bg-white border-b-[1px] border-black focus:bg-[#eee] text-base outline-none p-3 transition-colors duration-200 ease-in-out"
+                      className="w-full bg-white border-b border-black focus:bg-[#eee] text-base outline-none p-3 transition-colors duration-200 ease-in-out"
                       type="text"
                       name="name"
+                      onChange={nameHandle}
                       value={name}
-                      onChange={(e) => setName(e.target.value)}
                       placeholder="Name*"
                     />
                   </div>
                   <div className="md:col-span-1 col-span-2">
                     <input
-                      className="w-full bg-white border-b-[1px] border-black focus:bg-[#eee] text-base outline-none p-3 transition-colors duration-200 ease-in-out"
+                      className="w-full bg-white border-b border-black focus:bg-[#eee] text-base outline-none p-3 transition-colors duration-200 ease-in-out"
                       type="email"
                       name="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
                       placeholder="Email*"
                     />
                   </div>
                   <div className="md:col-span-1 col-span-2">
                     <select
-                      className="w-full capitalize bg-white border-b-[1px] border-black text-gray focus:bg-[#eee] text-base outline-none p-3 transition-colors duration-200 ease-in-out"
+                      className="w-full capitalize bg-white border-b border-black text-gray focus:bg-[#eee] text-base outline-none p-3 transition-colors duration-200 ease-in-out"
                       id=""
                     >
                       <option defaultValue>Services*</option>
@@ -100,7 +75,7 @@ const Contact = () => {
                   </div>
                   <div className="md:col-span-1 col-span-2">
                     <select
-                      className="w-full capitalize bg-white border-b-[1px] border-black text-gray focus:bg-[#eee] text-base outline-none p-3 transition-colors duration-200 ease-in-out"
+                      className="w-full capitalize bg-white border-b border-black text-gray focus:bg-[#eee] text-base outline-none p-3 transition-colors duration-200 ease-in-out"
                       id=""
                     >
                       <option defaultValue>Select Category*</option>
@@ -117,21 +92,21 @@ const Contact = () => {
                   </div>
                   <div className="md:col-span-1 col-span-2">
                     <input
-                      className="w-full bg-white border-b-[1px] border-black focus:bg-[#eee] text-base outline-none p-3 transition-colors duration-200 ease-in-out"
+                      className="w-full bg-white border-b border-black focus:bg-[#eee] text-base outline-none p-3 transition-colors duration-200 ease-in-out"
                       type="tel"
                       placeholder="Phone*"
                     />
                   </div>
                   <div className="md:col-span-1 col-span-2">
                     <input
-                      className="w-full bg-white border-b-[1px] border-black focus:bg-[#eee] text-base outline-none p-3 transition-colors duration-200 ease-in-out"
+                      className="w-full bg-white border-b border-black focus:bg-[#eee] text-base outline-none p-3 transition-colors duration-200 ease-in-out"
                       type="text"
                       placeholder="Company"
                     />
                   </div>
                   <div className=" col-span-full">
                     <textarea
-                      className="w-full bg-white border-b-[1px] border-black focus:bg-[#eee] text-base outline-none p-3 transition-colors duration-200 ease-in-out"
+                      className="w-full bg-white border-b border-black focus:bg-[#eee] text-base outline-none p-3 transition-colors duration-200 ease-in-out"
                       rows="8"
                       placeholder="Message"
                     ></textarea>

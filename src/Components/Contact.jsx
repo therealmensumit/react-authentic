@@ -11,9 +11,36 @@ const Contact = () => {
     "E-commerce website and design services",
   ];
   const [name, setName] = useState();
+  const [email, setEmail] = useState();
+  const [nameErr, setNameErr] = useState();
+  const [emailErr, setEmailErr] = useState();
+  
+  const loginHandle = (e)=> {
+    e.preventDefault();
+    if(name.length <= 3 || email.length <= 5) {
+      alert(false)
+    } else {
+      alert(true)
+    }
+  }
+
   const nameHandle = (e) => {
-    setName(e.target.value);
-    console.log(e.target.value);
+    let isLength = e.target.value;
+    if (isLength.length <= 3) {
+      setNameErr(true);
+    } else {
+      setNameErr(false);
+    }
+    setName(isLength);
+  }
+  const emailHandle = (e) => {
+    let isLength = e.target.value;
+    if (isLength.length <= 5) {
+      setEmailErr(true);
+    } else {
+      setEmailErr(false);
+    }
+    setEmail(isLength);
   }
   return (
     <>
@@ -37,7 +64,7 @@ const Contact = () => {
           <div className="grid grid-cols-3 gap-8 items-center">
             <div className="md:col-span-2 col-span-3">
               <div className="md:p-8 p-4 shadow-xl bg-white rounded-xl">
-                <form className="grid grid-cols-2 gap-8">
+                <form className="grid grid-cols-2 gap-8" onSubmit={loginHandle}>
                   <div className="md:col-span-1 col-span-2">
                     <input
                       className="w-full bg-white border-b border-black focus:bg-[#eee] text-base outline-none p-3 transition-colors duration-200 ease-in-out"
@@ -47,14 +74,18 @@ const Contact = () => {
                       value={name}
                       placeholder="Name*"
                     />
+                    {nameErr && <p className="text-red-500 text-sm">Invalid Name</p>}
                   </div>
                   <div className="md:col-span-1 col-span-2">
                     <input
                       className="w-full bg-white border-b border-black focus:bg-[#eee] text-base outline-none p-3 transition-colors duration-200 ease-in-out"
                       type="email"
                       name="email"
+                      onChange={emailHandle}
+                      value={email}
                       placeholder="Email*"
-                    />
+                      />
+                    {emailErr && <p className="text-red-500 text-sm">Invalid Email</p>}
                   </div>
                   <div className="md:col-span-1 col-span-2">
                     <select

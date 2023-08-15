@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react"
 import { Link, useLocation } from "react-router-dom";
 import Logo from '../assets/img/logo.svg'
-import {FaBars,FaChevronDown} from "react-icons/fa6";
+import {FaBars, FaTimes, FaChevronDown} from "react-icons/fa";
 
 const Nav = () => {
   const [isActive, setIsActive] = useState(false);
@@ -22,7 +22,7 @@ const Nav = () => {
           <img src={Logo} alt="Logo" className="md:w-24 w-20" />
         </Link>
         <button onClick={toggleClass} className="ml-auto p-2 lg:hidden">
-          <FaBars className="fill-white" />
+          {isActive ? <FaTimes className="fill-white" /> : <FaBars className="fill-white" />}
         </button>
         <nav className={isActive ? 'flex flex-col items-center absolute top-full right-0 p-4 bg-blue w-full h-screen text-center' : 'ml-auto hidden lg:flex lg:gap-4 flex-wrap items-center text-base justify-center'}>
           <Link to={'/'} className="capitalize inline-block py-4 text-white hover:text-orange">home</Link>

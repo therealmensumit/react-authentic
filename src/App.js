@@ -9,6 +9,8 @@ import Contact from "./Components/Contact";
 import FreeConsultation from "./Components/FreeConsultation";
 import Footer from "./Components/Footer";
 import ScrollToTop from "./ScrollToTop";
+import ScrollTopButton from "./Components/ScrollTopButton";
+
 import Demo from "./Components/Demo";
 
 
@@ -27,6 +29,7 @@ function App() {
           <Route path="/demo" element={<Demo />} />
         </Routes>
         <Footer />
+        <ScrollTopButton />
       </BrowserRouter>
     </>
   );

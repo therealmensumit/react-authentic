@@ -7,6 +7,12 @@ const Nav = () => {
   const [isActive, setIsActive] = useState(false);
   const location = useLocation();
 
+  const [headerClass, setHeaderClass] = useState(false);
+  const handleScrollHeader = () => {
+    window.scrollY > 300 ? setHeaderClass(true) : setHeaderClass(false)
+  };
+  window.addEventListener('scroll', handleScrollHeader);
+
   useEffect(() => {
     setIsActive(false); // Close the dropdown menu on route change
   }, [location]);
@@ -16,7 +22,7 @@ const Nav = () => {
   };
 
   return (
-    <header className="bg-blue font-body sticky top-0 z-10">
+    <header className={`bg-blue w-full font-body z-10 transition-all ease-linear duration-300 ${headerClass ? 'fixed top-0' : '-top-32'}`}>
       <div className="container mx-auto flex flex-wrap px-4 py-2 items-center">
         <NavLink to={'/'} className="flex title-font font-medium items-center text-orange">
           <img src={Logo} alt="Logo" className="md:w-24 w-20" />

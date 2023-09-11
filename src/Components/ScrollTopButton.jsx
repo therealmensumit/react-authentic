@@ -4,11 +4,7 @@ import { FaChevronUp } from "react-icons/fa6";
 const ScrollTopButton = () => {
   const [showButton, setShowButton] = useState(false);
   const handleScroll = () => {
-    if (window.scrollY > 300) {
-      setShowButton(true);
-    } else {
-      setShowButton(false);
-    }
+    window.scrollY > 300 ? setShowButton(true) : setShowButton(false)
   };
   window.addEventListener('scroll', handleScroll);
 
